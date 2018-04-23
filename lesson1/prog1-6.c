@@ -10,4 +10,3 @@ int main(void){
   }
   printf("総和は%d",sum);
 }
-
