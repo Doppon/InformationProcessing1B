@@ -1,20 +1,29 @@
 #include <stdio.h>
 int main(void){
-	FILE *fp;
+	FILE *fp_txt;
+    FILE *fp_code;
     char line[1000];
     int i=1;
-   
-    if((fp = fopen("prog2-1a-line.txt","w"))==NULL){
-    	printf("\nファイルをオープンできません。");
+
+    fp_txt = fopen("prog2-1a-line.txt","w");
+    if(fp_txt == NULL){
+    	printf("\nテキストファイルをオープンできませんでした。");
+        return -1;
     }
-    else {
-    	// fprintf(fp, "%s",line);
-    	while((fgets(line,sizeof(line),fp))!=NULL){
-        fprintf("%d:%s",i,line);
-        i++;
-        }
+    
+    fp_code = fopen("prog2-1a-line.txt","w");
+    if(fp_code == NULL){
+    	printf("\nテキストファイルをオープンできませんでした。");
+        return -1;
     }
 
-	fclose(fp);
+    // fprintf(fp, "%s",line);    
+    // while((fgets(line,sizeof(line),fp))!=NULL){
+    //     fprintf("%c:%s",(char)i,line);
+    //     i++;
+    // }
+    
+	fclose(fp_txt);
+	fclose(fp_code);
     return 0;
 }
