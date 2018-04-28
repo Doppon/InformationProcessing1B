@@ -11,7 +11,7 @@ int main(void){
         return -1;
     }
     
-    fp_code = fopen("prog2-1a-line.txt","w");
+    fp_code = fopen("prog2-1a.c","r");    
     if(fp_code == NULL){
     	printf("\nコードファイルをオープンできませんでした。");
         return -1;
