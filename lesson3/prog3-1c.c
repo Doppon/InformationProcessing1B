@@ -17,10 +17,10 @@ int main(void){
         return -1;
     }
 
-    // while((fgets(line,sizeof(line),fp_txt))!=NULL){
-    //     fprintf("%c:%s",(char)i,line);
-    //     i++;
-    // }
+    while((fgets(line,sizeof(line),fp_code))!=NULL){
+        fprintf(fp_txt,"%d:%s",i,line);
+        i++;
+    }
     
 	fclose(fp_txt);
 	fclose(fp_code);
