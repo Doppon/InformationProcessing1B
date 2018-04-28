@@ -12,6 +12,7 @@ int main(void){
     	while((fgets(line,sizeof(line),fp))!=NULL){
         fprintf("%d:%s",i,line);
         i++;
+        }
     }
 
 	fclose(fp);
