@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 int main(void){
 	int i,array1[10000],array2[10000];
 	for(i = 0; i <10000; i++){
