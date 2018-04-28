@@ -1,0 +1,19 @@
+1:#include <stdio.h>
+2:int main(void){
+3:	int i,array1[10000],array2[10000];
+4:	for(i = 0; i <10000; i++){
+5:		array1[i] = 2*i-1;
+6:		array2[i] = 2*i;
+7:	}
+8:	int change_times;
+9:	int k,tmp[10000];
+10:	for(change_times = 0; change_times < 2000; ++change_times){
+11:		for(k = 0; k < 10000; k++){
+12:			tmp[k] = array1[k];
+13:			array1[k] = array2[k];
+14:			array2[k] = tmp[k];
+15:		}
+16:	}
+17:	printf("終了\n");
+18: 	return 0;
+19:}
