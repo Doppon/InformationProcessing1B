@@ -2,8 +2,7 @@
 int main(void){
 	FILE *fp;
     char line[1000];
-    int i;
-    i=1;
+    int i=1;
    
     if((fp = fopen("prog2-1a-line.txt","w"))==NULL){
     	printf("\nファイルをオープンできません。");
