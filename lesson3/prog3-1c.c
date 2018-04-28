@@ -13,12 +13,11 @@ int main(void){
     
     fp_code = fopen("prog2-1a-line.txt","w");
     if(fp_code == NULL){
-    	printf("\nテキストファイルをオープンできませんでした。");
+    	printf("\nコードファイルをオープンできませんでした。");
         return -1;
     }
 
-    // fprintf(fp, "%s",line);    
-    // while((fgets(line,sizeof(line),fp))!=NULL){
+    // while((fgets(line,sizeof(line),fp_txt))!=NULL){
     //     fprintf("%c:%s",(char)i,line);
     //     i++;
     // }
