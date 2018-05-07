@@ -39,4 +39,3 @@ int solve(double a, double b, double c, double d, double p, double q){
     return 1;
   }
 }
-
