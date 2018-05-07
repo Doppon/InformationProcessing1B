@@ -15,6 +15,6 @@ int main(void){
 		array1 = array2;
 		array2 = tmp;
 	}
-	printf("終了");
+	printf("終了\n");
 	return 0;
 }
