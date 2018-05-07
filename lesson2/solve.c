@@ -22,8 +22,7 @@ int main(void){
   // scanf("%lf",&d);
 
   solve(a, b, c, d, p, q);
-  printf("x = %f\n",x);
-  printf("y = %f\n",y);
+  printf("x = %f,",x); printf("y = %f\n",y);
 }
 
 int solve(double a, double b, double c, double d, double p, double q){
