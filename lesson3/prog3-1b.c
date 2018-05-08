@@ -6,7 +6,7 @@ int main(void){
 
     fp=fopen("prog2-1a.c","r");
     if(fp==NULL){
-        printf("エラー発生");
+        printf("ファイルが開けませんでした。\n");
         return -1;
     }
     
