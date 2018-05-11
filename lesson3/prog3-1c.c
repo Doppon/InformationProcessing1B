@@ -6,10 +6,6 @@ int main(void){
     int i=1;
 
     fp_txt = fopen("prog2-1a-line.txt","w");
-    if(fp_txt == NULL){
-    	printf("\nテキストファイルをオープンできませんでした。");
-        return -1;
-    }
     
     fp_code = fopen("prog2-1a.c","r");    
     if(fp_code == NULL){
