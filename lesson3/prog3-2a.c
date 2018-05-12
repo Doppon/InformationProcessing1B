@@ -12,6 +12,12 @@
   int i;
   double ave,bunsan;
 
+	// 分散の定義
+	//
+	//  1   n            2
+	// ---  Σ [ xi  - μ ]
+	//  n  i=1
+
   csv = fopen("2018_population.csv", "r");
   if(csv == NULL){
     printf("ファイルが開けませんでした。");
