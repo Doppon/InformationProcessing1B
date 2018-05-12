@@ -1,0 +1,10 @@
+1:array = []
+2:
+3:File.open("2018_population.csv") do |f|
+4:  f.each_line do |line|
+5:    locate, num = line.chomp.split(" ")
+6:    array << num.to_i 
+7:  end
+8:end
+9:
+10:puts array.sum / array.length
