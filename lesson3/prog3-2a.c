@@ -1,6 +1,6 @@
 #include <stdio.h>
-	int main(void){
-  FILE *csv;
+  int main(void){
+	FILE *csv;
 
   struct _pref{
     char name[50];
@@ -22,7 +22,7 @@
   if(csv == NULL){
     printf("ファイルが開けませんでした。");
     return -1;
-	}
+  }
 
   PREF list[50];
   while(fscanf(csv, "%s %d", list[i].name, &list[i].population) !=EOF){
@@ -39,5 +39,5 @@
   bunsan = sum2/47.0;
   printf("平均:%f, 分散:%f\n", ave, bunsan);
   fclose(csv);
-	return 0;
+  return 0;
 }
