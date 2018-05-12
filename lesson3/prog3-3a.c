@@ -2,6 +2,7 @@
 int main(int argc, char *argv[]){
   FILE *fp;
   char line[1000];
+  int i = 1;
 
   fp = fopen(argv[1], "r");
   if(fp == NULL){
@@ -11,4 +12,6 @@ int main(int argc, char *argv[]){
 
   printf("コピー元ファイル：%s, コピー先ファイル：%s", argv[1], argv[2]);
 
+  fclose(fp);
+  return 0;
 }
