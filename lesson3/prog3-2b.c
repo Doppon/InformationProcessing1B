@@ -5,19 +5,23 @@ int main(void){
     int population;
   };
   typedef struct _pref PREF;
+  
   FILE *csv;
   int sum = 0;
   int sum2 = 0;
   int i = 0, j;
+  
   csv=fopen("2018_population.csv", "r");
   if(csv==NULL){
     printf("ファイルが開けませんでした。");
     return -1;
   }
+
   PREF list[50];
   while(fscanf(csv, "%s %d", &list[i].name, &list[i].population)!=EOF){
     i++;
   }
+
   PREF a;
   for (i = 0 ; i < 47; i++){
     for(j=i+1; j < 47; j++){
@@ -32,6 +36,7 @@ int main(void){
   for (i = 0; i < 20; i++){
     printf("%d件目：%s %d\n", i+1, list[i].name, list[i].population);
   }
+
   fclose(csv);
   return 0;
 }
