@@ -1,29 +1,27 @@
 #include <stdio.h>
 int main(void){
+  FILE *csv;
+  int i, j;
   struct _pref{
     char name[50];
     int population;
   };
   typedef struct _pref PREF;
-  
-  FILE *csv;
+  PREF list[50];
+  PREF a;
 
-  int i, j;
-  
-  csv=fopen("2018_population.csv", "r");
-  if(csv==NULL){
+  csv = fopen("2018_population.csv", "r");
+  if(csv == NULL){
     printf("ファイルが開けませんでした。");
     return -1;
   }
 
-  PREF list[50];
   while(fscanf(csv, "%s %d", list[i].name, &list[i].population) != EOF){
     i++;
   }
 
-  PREF a;
   for (i = 0 ; i < 47; i++){
-    for(j=i+1; j < 47; j++){
+    for(j = i+1; j < 47; j++){
       if(list[i].population > list[j].population){
         a = list[i];
         list[i]=list[j];
