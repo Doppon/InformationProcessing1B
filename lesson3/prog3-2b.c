@@ -18,7 +18,7 @@ int main(void){
   }
 
   PREF list[50];
-  while(fscanf(csv, "%s %d", &list[i].name, &list[i].population)!=EOF){
+  while(fscanf(csv, "%s %d", list[i].name, &list[i].population) != EOF){
     i++;
   }
 
