@@ -34,7 +34,7 @@
   mean = all_population / 47.0;
 
   for (i = 0 ; i < 47; i ++){
-    sum = sum + (list[i].population - mean) * (list[i].population - mean);
+    sum += (list[i].population - mean) * (list[i].population - mean);
   }
 
   variance = sum / 47.0;
