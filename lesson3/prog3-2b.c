@@ -9,7 +9,6 @@ int main(void){
   int sum = 0;
   int sum2 = 0;
   int i = 0, j;
-  double ave,bunsan;
   csv=fopen("2018_population.csv", "r");
   if(csv==NULL){
     printf("ファイルが開けませんでした。");
