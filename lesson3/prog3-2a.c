@@ -18,7 +18,7 @@ int main(void){
 	}
 
   PREF list[50];
-  while(fscanf(csv, "%s%d", list[i].name, &list[i].population)!=EOF){
+  while(fscanf(csv, "%s %d", list[i].name, &list[i].population)!=EOF){
     sum=sum+list[i].population;
     i++;
   }
@@ -26,7 +26,7 @@ int main(void){
   ave = sum/47.0;
 
   for (i = 0 ; i < 47; i ++){
-    sum2 = sum2+(list[i].population-ave)*(list[i].population-ave);
+    sum2 = sum2 + (list[i].population - ave) * (list[i].population - ave);
   }
 
   bunsan = sum2/47.0;
