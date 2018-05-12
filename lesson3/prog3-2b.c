@@ -7,8 +7,8 @@ int main(void){
   typedef struct _pref PREF;
   
   FILE *csv;
-  
-  int i = 0, j;
+
+  int i, j;
   
   csv=fopen("2018_population.csv", "r");
   if(csv==NULL){
