@@ -19,7 +19,7 @@ int main(void){
 
   PREF list[50];
   while(fscanf(csv, "%s %d", list[i].name, &list[i].population)!=EOF){
-    sum=sum+list[i].population;
+    sum += list[i].population;
     i++;
   }
 
