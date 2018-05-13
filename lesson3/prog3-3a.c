@@ -17,8 +17,10 @@ int main(int argc, char *argv[]){
     fprintf(copy_file, "%d:%s", i,line);
     i++;
   }
-
-  printf("コピー元ファイル：%s, コピー先ファイル：%s", argv[1], argv[2]);
+  printf("[コピー完了しました]\n");
+  printf("----------------------------------------------------------\n");
+  printf("| コピー元ファイル[%s] -> コピー先ファイル[%s] |\n", argv[1], argv[2]);
+  printf("----------------------------------------------------------\n");
 
   fclose(origin_file);
   fclose(copy_file);
