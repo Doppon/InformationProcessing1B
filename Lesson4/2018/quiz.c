@@ -14,7 +14,7 @@ int quizReader(QUIZ *quiz, int *n)
     return -1;
   }
 
-  while (fscanf(fp, " %[^,],%[^,],%[^,],%d", quiz[i].question, quiz[i].ans1, quiz[i].ans2, &quiz[i].correct_ans) != EOF && i < N) {
+  while(fscanf(fp, " %[^,],%[^,],%[^,],%d", quiz[i].question, quiz[i].ans1, quiz[i].ans2, &quiz[i].correct_ans) != EOF && i < N){
     i++;
   }
   *n = i;
@@ -36,7 +36,7 @@ void input(){
 
   while (i < n) {
     printf("%s\n", quiz[i].question);
-    printf("1:%s 2:%s\n", quiz[i].ans1, quiz[i].ans2);
+    printf("選択肢1:%s 選択肢2:%s\n", quiz[i].ans1, quiz[i].ans2);
     scanf("%d", &ans);
     if(ans == quiz[i].correct_ans){
       puts("CORRECT!");
