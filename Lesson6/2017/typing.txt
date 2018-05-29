@@ -1,0 +1,5 @@
+Harvard,7
+Cambridge,9
+Oxford,6
+Massachusetts,13
+Stanford,8
