@@ -27,7 +27,8 @@ void input()
 {
   int i=0;
   int p=0;
-  int n, ans;  
+  int n, ans;
+
   QUIZ *quiz = (QUIZ *)malloc(sizeof(QUIZ) * N);
   if ((QUIZ *)malloc(sizeof(QUIZ) * N) == NULL) {
     puts("invalid quiz file");
@@ -42,7 +43,7 @@ void input()
     scanf("%d", &ans);
     if (ans == quiz[i].correct_ans) {
       puts("CORRECT!");
-      p=p+5;
+      p += 5;
     } else {
       puts("WRONG!");
     }

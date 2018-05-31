@@ -23,19 +23,18 @@ void menu(){
 
 			case 'q':
 				input();
-				printf("menu> ");
 				break;
 
 			case 't':
-				success=DataReader(dataArray,&n);
+				success=DataReader(dataArray, &n);
 				if(success==0){
 					score=typing(dataArray,n);
-					printf("You got score:%d¥n",score);
+					printf("You got score:%d\n", score);
 				}
-				printf("menu> ");
 				break;
 
-			case 'e':ret=0;
+			case 'e':
+        ret=0;
 				break;
 
 			default :
