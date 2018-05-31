@@ -26,7 +26,7 @@
   }
 
   PREF list[50];
-  while(fscanf(csv, "%s %d", list[i].name, &list[i].population) !=EOF){
+  while(fscanf(csv, "%s %d", list[i].name, &list[i].population) !=　EOF){
     all_population += list[i].population;
     i++;
   }
