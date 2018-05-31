@@ -18,8 +18,8 @@ void menu(){
 
 		switch(ch){
 			case '\n':
-				printf("\n");
-				break;
+				printf("menu> ");
+        break;
 
 			case 'q':
 				input();
@@ -39,11 +39,11 @@ void menu(){
 				break;
 
 			default :
-				printf("invalid command.¥n");
-        
+				printf("invalid command.\n");
+
 		}
 	}
 
 	free(dataArray);
-	return 0;
+	return;
 }
