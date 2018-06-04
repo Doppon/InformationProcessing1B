@@ -4,7 +4,7 @@
 #include <time.h>
 #include "typing.h"
 
-int DataReader(DATA *dataArray, int *n)
+int dataReader(DATA *dataArray, int *n)
 {
   FILE *fp;
   int i = 0;
