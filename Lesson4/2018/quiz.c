@@ -14,20 +14,23 @@ int quizReader(QUIZ *quiz, int *n)
     return -1;
   }
 
-  while(fscanf(fp, " %[^,],%[^,],%[^,],%d", quiz[i].question, quiz[i].ans1, quiz[i].ans2, &quiz[i].correct_ans) != EOF && i < N){
+  while (fscanf(fp, " %[^,],%[^,],%[^,],%d",
+    quiz[i].question, quiz[i].ans1, quiz[i].ans2, &quiz[i].correct_ans) != EOF && i < N){
     i++;
   }
   *n = i;
-
   fclose(fp);
   return 0;
 }
 
-void input(){
-  int i = 0, n, ans, p = 0;
+void input()
+{
+  int i=0;
+  int p=0;
+  int n, ans;
 
   QUIZ *quiz = (QUIZ *)malloc(sizeof(QUIZ) * N);
-  if((QUIZ *)malloc(sizeof(QUIZ) * N) == NULL){
+  if ((QUIZ *)malloc(sizeof(QUIZ) * N) == NULL) {
     puts("invalid quiz file");
     return;
   }
@@ -36,9 +39,9 @@ void input(){
 
   while (i < n) {
     printf("%s\n", quiz[i].question);
-    printf("選択肢1:%s 選択肢2:%s\n", quiz[i].ans1, quiz[i].ans2);
+    printf("1:%s 2:%s\n", quiz[i].ans1, quiz[i].ans2);
     scanf("%d", &ans);
-    if(ans == quiz[i].correct_ans){
+    if (ans == quiz[i].correct_ans) {
       puts("CORRECT!");
       p += 5;
     } else {
