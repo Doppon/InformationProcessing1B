@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <time.h>
 #include "typing.h"
 
@@ -27,6 +28,8 @@ int typing(DATA *dataArray, int n)
   double t=20, diff=0;
   char answer[10];
   time_t starttime, endtime;
+  // 精度の高い乱数を生成するため追記
+	srand(time(NULL));  
 
   while (t >= 0) {
     i = rand() % n;
