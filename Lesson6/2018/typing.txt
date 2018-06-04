@@ -1,0 +1,3 @@
+Harvard,7
+Cambridge,9
+Oxford,6
