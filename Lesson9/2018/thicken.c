@@ -32,7 +32,7 @@ void thicken() {
 
   fpIn = fopen("venice-edge.bmp", "r");
   if (fpIn == NULL) {
-    puts("error.");
+    puts("couldn't open venice-edge.bmp");
     return;
   }
 
@@ -41,7 +41,7 @@ void thicken() {
 
   ret1 = readImage(fpIn, imgIn);
   if (!ret1) {
-    puts("error.");
+    puts("couldn't readImage");
     return;
   }
   
