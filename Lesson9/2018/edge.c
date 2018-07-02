@@ -32,18 +32,18 @@ void edge() {
     for (j = 0; j < imgOut -> height; j++) {
       label = getLabel(i, j, imgOut -> width);
       if (i == 0 || j == 0 || i == imgOut -> width - 1 || j == imgOut -> height - 1) {
-	imgOut -> pixels[label].r = 0;
-	imgOut -> pixels[label].g = 0;
-	imgOut -> pixels[label].b = 0;
+        imgOut -> pixels[label].r = 0;
+        imgOut -> pixels[label].g = 0;
+        imgOut -> pixels[label].b = 0;
       } else {
-	label1 = getLabel(i + 1, j, imgOut -> width);
-	label2 = getLabel(i - 1, j, imgOut -> width);
-	label3 = getLabel(i, j + 1, imgOut -> width);
+        label1 = getLabel(i + 1, j, imgOut -> width);
+        label2 = getLabel(i - 1, j, imgOut -> width);
+        label3 = getLabel(i, j + 1, imgOut -> width);
         label4 = getLabel(i, j - 1, imgOut -> width);
 
-	imgOut -> pixels[label].r = 255 - sqrt(pow(((imgIn -> pixels[label1].r - imgIn -> pixels[label2].r) / 2), 2.0) + pow(((imgIn -> pixels[label3].r - imgIn -> pixels[label4].r) / 2), 2.0));
-	imgOut -> pixels[label].g = 255 - sqrt(pow(((imgIn -> pixels[label1].g - imgIn -> pixels[label2].g) / 2), 2.0) + pow(((imgIn -> pixels[label3].g - imgIn -> pixels[label4].g) / 2), 2.0));
-	imgOut -> pixels[label].b = 255 - sqrt(pow(((imgIn -> pixels[label1].b - imgIn -> pixels[label2].b) / 2), 2.0) + pow(((imgIn -> pixels[label3].b - imgIn -> pixels[label4].b) / 2), 2.0));
+        imgOut -> pixels[label].r = 255 - sqrt(pow(((imgIn -> pixels[label1].r - imgIn -> pixels[label2].r) / 2), 2.0) + pow(((imgIn -> pixels[label3].r - imgIn -> pixels[label4].r) / 2), 2.0));
+        imgOut -> pixels[label].g = 255 - sqrt(pow(((imgIn -> pixels[label1].g - imgIn -> pixels[label2].g) / 2), 2.0) + pow(((imgIn -> pixels[label3].g - imgIn -> pixels[label4].g) / 2), 2.0));
+        imgOut -> pixels[label].b = 255 - sqrt(pow(((imgIn -> pixels[label1].b - imgIn -> pixels[label2].b) / 2), 2.0) + pow(((imgIn -> pixels[label3].b - imgIn -> pixels[label4].b) / 2), 2.0));
       }
     }
   }

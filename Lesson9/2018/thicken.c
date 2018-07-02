@@ -58,14 +58,14 @@ void thicken() {
         imgOut -> pixels[label].g = 0;
         imgOut -> pixels[label].b = 0;
       } else {
-	label1 = getLabel(i + 1, j, imgOut -> width);
-	label2 = getLabel(i - 1, j, imgOut -> width);
-	label3 = getLabel(i, j + 1, imgOut -> width);
-	label4 = getLabel(i, j - 1, imgOut -> width);
+        label1 = getLabel(i + 1, j, imgOut -> width);
+        label2 = getLabel(i - 1, j, imgOut -> width);
+        label3 = getLabel(i, j + 1, imgOut -> width);
+        label4 = getLabel(i, j - 1, imgOut -> width);
 
-	imgOut -> pixels[label].r = min(imgIn -> pixels[label].r, imgIn -> pixels[label1].r, imgIn -> pixels[label2].r, imgIn -> pixels[label3].r, imgIn -> pixels[label4].r);
-	imgOut -> pixels[label].g = min(imgIn -> pixels[label].g, imgIn -> pixels[label1].g, imgIn -> pixels[label2].g, imgIn -> pixels[label3].g, imgIn -> pixels[label4].g);
-	imgOut -> pixels[label].b = min(imgIn -> pixels[label].b, imgIn -> pixels[label1].b, imgIn -> pixels[label2].b, imgIn -> pixels[label3].b, imgIn -> pixels[label4].b);
+        imgOut -> pixels[label].r = min(imgIn -> pixels[label].r, imgIn -> pixels[label1].r, imgIn -> pixels[label2].r, imgIn -> pixels[label3].r, imgIn -> pixels[label4].r);
+        imgOut -> pixels[label].g = min(imgIn -> pixels[label].g, imgIn -> pixels[label1].g, imgIn -> pixels[label2].g, imgIn -> pixels[label3].g, imgIn -> pixels[label4].g);
+        imgOut -> pixels[label].b = min(imgIn -> pixels[label].b, imgIn -> pixels[label1].b, imgIn -> pixels[label2].b, imgIn -> pixels[label3].b, imgIn -> pixels[label4].b);
       }
     }
   }
